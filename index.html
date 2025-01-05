@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        :root {
+            --primary-color: #34495E; 
+            --secondary-color: #F39C12;
+            --accent-color: #8E44AD; 
+            --background-color: #ECF0F1;
+            --text-color: #2C3E50; 
+            --light-text: #FFFFFF; 
+            --hover-color: #F1C40F;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--light-text);
+            padding: 6em 3em;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            position: absolute;
+            top: 10%;
+            left: 10px;
+            background: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        nav a {
+            padding: 12px;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: var(--hover-color);
+            transform: scale(1.1);
+        }
+
+        /* Unique Container Layout */
+        .container {
+            padding: 4rem 3rem;
+            text-align: left;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container h2 {
+            color: var(--secondary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .blog-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blog-section img, .blog-section video {
+            width: 45%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-section img:hover, .blog-section video:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-section p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-top: 1rem;
+        }
+
+        .blog-section a {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .blog-section a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            background: var(--light-text);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form label {
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            font-size: 1.2rem;
+        }
+
+        .contact-form button {
+            background: var(--secondary-color);
+            color: var(--light-text);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 1.2rem;
+            margin-top: 5rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--hover-color);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 2rem;
+            }
+
+            .blog-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+
+            nav a {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Website</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#navigation">Navigation</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Home</h2>
+    <p>Explore an immersive and unique website experience with creative layouts, interactive design, and dynamic content that enhances your visit.</p>
+</div>
+
+<div class="container" id="navigation">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="activity_1a.html" target="_blank">Activity 1A</a></li>
+        <li><a href="activity_1b.html" target="_blank">Activity 1B</a></li>
+        <li><a href="activity_1c.html" target="_blank">Activity 1C</a></li>
+    </ul>
+</div>
+
+<div class="container" id="blog">
+    <h2>Blog</h2>
+    <div class="blog-section">
+        <p>Enjoy our latest images, videos, and featured links!</p>
+        <img src="image1.jpg" alt="Photo 1">
+        <video controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="https://example.com" target="_blank">Visit our featured link</a>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Creative Paradise. All rights reserved.</p>
+    <p><a href="#home">Back to Top</a></p>
+</footer>
+
+</body>
+</html>
