@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Combined</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff5733;
+            font-family: 'Georgia', serif;
+        }
+        .example-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient background */
+        }
+        .example-section h2 {
+            color: #d84315;
+        }
+        .div-style, .section-style {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        .div-style {
+            background-color: #81d4fa; /* Light blue */
+        }
+        .section-style {
+            background-color: #a5d6a7; /* Light green */
+        }
+        .p-style {
+            background-color: #fff59d;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .article-style {
+            background-color: #fff9c4;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .nav-style {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .link-style {
+            padding: 10px;
+            text-decoration: none;
+            color: #0288d1; /* Blue */
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .link-style:hover {
+            color: #01579b; /* Darker blue */
+            text-decoration: underline;
+        }
+        .figure-style {
+            background-color: #e3f2fd; /* Light blue */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-style {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .caption {
+            font-style: italic;
+            color: #333;
+            margin-top: 10px;
+        }
+        .description {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #5d4037;
+        }
+        .form-style {
+            margin: 20px;
+            background-color: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .text-style {
+            font-size: 20px;
+            color: #212121;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Elements Demonstration</h1>
+
+    <div class="example-section">
+        <h2>Div and Span Example</h2>
+        <div style="background-color: lightcoral; padding: 10px;">
+            This is a div element with vibrant background.
+        </div>
+        <span style="background-color: lightgreen; padding: 5px;">
+            This is a span element.
+        </span>
+        <p>
+            More text here, and <span style="background-color: lightblue;">this is another span</span> within the paragraph.
+        </p>
+    </div>
+
+    <div class="example-section">
+        <h2>Div vs Section</h2>
+        <div class="div-style">
+            This is a generic <strong>div</strong> container with a subtle blue color.
+        </div>
+        <section class="section-style">
+            This is a <strong>section</strong>, representing a specific part of the document with semantic meaning.
+        </section>
+    </div>
+
+    <div class="example-section">
+        <h2>Paragraph vs Article</h2>
+        <p class="p-style">This is a <strong>paragraph</strong> element with a yellow background and rounded edges.</p>
+        <article class="article-style">
+            <h2>Article Title</h2>
+            <p>This is an <strong>article</strong> element. It represents a self-contained piece of content that could stand on its own.</p>
+        </article>
+    </div>
+
+    <div class="example-section">
+        <h2>Navigation vs Anchor</h2>
+        <nav class="nav-style">
+            <p>Navigate through the website:</p>
+            <a href="#home" class="link-style">Home</a>
+            <a href="#services" class="link-style">Services</a>
+            <a href="#contact" class="link-style">Contact</a>
+        </nav>
+        <p id="home">Welcome to the Home Section</p>
+        <p id="services">Explore our Services</p>
+        <p id="contact">Contact Us</p>
+    </div>
+
+    <div class="example-section">
+        <h2>Figure vs Image</h2>
+        <section>
+            <figure class="figure-style">
+                <img src="Beautiful Artwork.jpg" alt="Beautiful Artwork" class="image-style">
+                <figcaption class="caption">"A Burst of Color" - Abstract Art</figcaption>
+            </figure>
+            <p class="description">
+                The image above represents an abstract artistic expression, blending vibrant colors to evoke emotion and creativity.
+            </p>
+        </section>
+        <section>
+            <figure class="figure-style">
+                <img src="Scenic Mountain View.jpg" alt="Scenic Mountain View" class="image-style">
+                <figcaption class="caption">A Majestic Mountain View</figcaption>
+            </figure>
+            <p class="description">
+                Travel allows us to experience the world’s wonders. Here, the image showcases a stunning mountain view, reminding us of the beauty of nature.
+            </p>
+        </section>
+    </div>
+
+    <div class="example-section">
+        <h2>Label vs Legend</h2>
+        <form class="form-style">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="example-section">
+        <h2>Strong vs Emphasis vs Bold</h2>
+        <p class="text-style"><strong>This is strong text.</strong> It indicates importance.</p>
+        <p class="text-style"><em>This is emphasized text.</em> It suggests a change in meaning.</p>
+        <p class="text-style"><b>This is bold text.</b> It only applies style without added meaning.</p>
+    </div>
+
+</body>
+</html>
