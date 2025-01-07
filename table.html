@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "r1c1 r1c3 r1c3 r1c4 r1c5"
+                "r3c1 r3c1 r2c3 r1c4 r1c5"
+                "r3c1 r3c1 r3c4 r3c4 r3c6"
+                "r4c1 r4c2 r4c4 r4c4 r4c5"
+                "r5c1 r5c1 r5c3 r5c4 r5c5"
+                "r6c4 r6c4 r6c4 r6c4 r6c4";
+            gap: 5px;
+            padding: 10px;
+        }
+        .grid-item {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .r1c1 { grid-area: r1c1; }
+        .r1c3 { grid-area: r1c3; }
+        .r1c4 { grid-area: r1c4; }
+        .r1c5 { grid-area: r1c5; }
+        .r2c3 { grid-area: r2c3; }
+        .r3c1 { grid-area: r3c1; }
+        .r3c4 { grid-area: r3c4; }
+        .r3c6 { grid-area: r3c6; }
+        .r4c1 { grid-area: r4c1; }
+        .r4c2 { grid-area: r4c2; }
+        .r4c4 { grid-area: r4c4; }
+        .r4c5 { grid-area: r4c5; }
+        .r5c1 { grid-area: r5c1; }
+        .r5c3 { grid-area: r5c3; }
+        .r5c4 { grid-area: r5c4; }
+        .r5c5 { grid-area: r5c5; }
+        .r6c4 { grid-area: r6c4; }
+    </style>
+</head>
+<body>
+    <h1>Aim: Design a Web Page Layout</h1>
+    <div class="grid-container">
+        <div class="grid-item r1c1">r1c1</div>
+        <div class="grid-item r1c3">r1c3</div>
+        <div class="grid-item r1c4">r1c4</div>
+        <div class="grid-item r1c5">r1c5</div>
+        <div class="grid-item r2c3">r2c3</div>
+        <div class="grid-item r3c1">r3c1</div>
+        <div class="grid-item r3c4">r3c4</div>
+        <div class="grid-item r3c6">r3c6</div>
+        <div class="grid-item r4c1">r4c1</div>
+        <div class="grid-item r4c2">r4c2</div>
+        <div class="grid-item r4c4">r4c4</div>
+        <div class="grid-item r4c5">r4c5</div>
+        <div class="grid-item r5c1">r5c1</div>
+        <div class="grid-item r5c3">r5c3</div>
+        <div class="grid-item r5c4">r5c4</div>
+        <div class="grid-item r5c5">r5c5</div>
+        <div class="grid-item r6c4">r6c4</div>
+    </div>
+</body>
+</html>
